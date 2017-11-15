@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="hello" class="com.beifengioc.test.HelloWorldImpl"></bean>
+	<bean id="data" class="com.beifengioc.test.TestData">
+		<!-- 字符串的配置 -->
+		<property name="name" value="Adam"/>
+		<property name="name1">zh</property>
+		<!-- List的配置 -->
+		<property name="booklist">
+			<list>
+				<value>Java</value>
+				<value value="SQL"></value>
+				<value>struts</value>
+			</list>
+		</property>
+		<!-- map的配置 -->
+		<property name="userinfo">
+			<map>
+				<value key="name" value="Adam"></value>
+				<value key="sex">男</value>
+			</map>
+		</property>
+		<!-- Properties的配置 -->
+		<property name="props">
+			<props>
+				<prop key="1">123</prop>
+				<prop key="2" value="456"></prop>
+			</props>
+		</property>
+		<!-- Set的配置 -->
+		<property name="bookset">
+			<set>
+				<value>spring</value>
+				<value>mysql</value>
+				<value>hibernate</value>
+			</set>
+		</property>
+		<!-- 依赖配置 -->
+		<property name="hello">
+			<ref bean="hello"></ref>
+		</property>
+	</bean>
+</beans>
